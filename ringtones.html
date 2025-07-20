@@ -11,7 +11,7 @@
         <a href="index.html"><img src="image-removebg-preview.png"></a>
         <a href="timer.html" class="navitems">Timer</a>
         <a href="ringtones.html" class="navitems">Ringtone</a>
-        <a href="#" class="navitems">About</a>
+        <a href="about.html" class="navitems">About</a>
     </div>
     <div class="ringtone-list">
         <h2>Select a Ringtone</h2>
@@ -27,6 +27,12 @@
                 <label for="virus">Virus</label>
                 <button type="button" class="ringtone-play" onclick="playRingtone('virus.mp3')">Play</button>
                 <button type="button" class="ringtone-stop" id="stopVirus" onclick="stopRingtone()">Stop</button>
+            </div>
+            <div class="ringtone-option">
+                <input type="radio" id="jet2" name="ringtone" value="jet2.mp3">
+                <label for="jet2">Jet 2 Holiday</label>
+                <button type="button" class="ringtone-play" onclick="playRingtone('jet2.mp3')">Play</button>
+                <button type="button" class="ringtone-stop" id="stopJet2" onclick="stopRingtone()">Stop</button>
             </div>
             <div class="ringtone-option">
                 <input type="radio" id="custom" name="ringtone" value="custom">
@@ -54,6 +60,8 @@
             currentStopBtn = document.getElementById('stopLonely');
         } else if (src === 'virus.mp3') {
             currentStopBtn = document.getElementById('stopVirus');
+        } else if (src === 'jet2.mp3') {
+            currentStopBtn = document.getElementById('stopJet2');
         }
         if (currentStopBtn) currentStopBtn.classList.add('active');
     }
@@ -172,6 +180,8 @@
             document.getElementById('lonely').checked = true;
         } else if (selected === 'virus.mp3') {
             document.getElementById('virus').checked = true;
+        } else if (selected === 'jet2.mp3') {
+            document.getElementById('jet2').checked = true;
         }
     };
     </script>
